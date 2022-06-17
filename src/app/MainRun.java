@@ -36,6 +36,8 @@ public class MainRun {
         routeDAO.readData();
         AssignmentDAO assignmentDAO = new AssignmentDAO();
         assignmentDAO.readData();
+        MainRun.driverList.sort((Driver a,Driver b) -> a.getMaLx()-b.getMaLx());
+        MainRun.routeList.sort((Route a,Route b)-> a.getMaTuyen()-b.getMaTuyen());
     }
     private static void Menu() {
         while (true) {
